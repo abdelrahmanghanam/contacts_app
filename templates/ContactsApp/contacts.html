@@ -1,0 +1,11 @@
+
+
+<h1> Contacts</h1>
+<table>
+<tr><th>First Name</th><th>Last Name</th><th>Show Contact</th>
+{% for contact in contact_list %}
+        <tr><td>{{ contact.first_name }}</td><td>{{ contact.last_name }}</td> <td> <a href="./get_contact_details?contact_id={{ contact.id }}"> show contact details</a></td> </tr>
+{% endfor %}
+</table>
+
+<a href="./create_new_contact"><h3 style="color: green"> Creat new contact</h3></a>
